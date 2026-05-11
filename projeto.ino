@@ -20,23 +20,30 @@ EstadoSistema estadoAtual = MENU;
 #define FA4   349
 #define SOL4  392
 #define LA4   440
+#define SI4   494
+#define DO5   523
 
 const int totalMusicas = 5;
-String nomesMusicas[totalMusicas] = {
-  "Cai Cai Balao",
-  "Brilha Brilha",
-  "Dona Aranha",
-  "Tema do Gas",
-  "Ciranda"
-};
-
+char tituloMusica[17];
 int musicaSelecionada = 0;
 
 const unsigned int notasCaiCaiBalao[] PROGMEM = { SOL4, SOL4, LA4, SOL4, MI4, SOL4, LA4, SOL4, MI4, RE4, MI4, DO4 };
 const byte temposCaiCaiBalao[] PROGMEM = { 4, 4, 4, 4, 2, 4, 4, 4, 2, 4, 4, 2 };
 
+const unsigned int notasBrilhaBrilha[] PROGMEM = { DO4, DO4, SOL4, SOL4, LA4, LA4, SOL4, FA4, FA4, MI4, MI4, RE4, RE4, DO4 };
+const byte temposBrilhaBrilha[] PROGMEM = { 4, 4, 4, 4, 4, 4, 2, 4, 4, 4, 4, 4, 4, 2 };
+
+const unsigned int notasDonaAranha[] PROGMEM = { DO4, RE4, MI4, DO4, DO4, RE4, MI4, DO4, MI4, FA4, SOL4, MI4, FA4, SOL4 };
+const byte temposDonaAranha[] PROGMEM = { 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 2, 4, 4, 2 };
+
+const unsigned int notasTemaDoGas[] PROGMEM = { SOL4, MI4, SOL4, DO5, SI4, SOL4, LA4, SI4, SOL4 };
+const byte temposTemaDoGas[] PROGMEM = { 8, 8, 8, 4, 8, 8, 8, 4, 2 };
+
+const unsigned int notasCiranda[] PROGMEM = { SOL4, LA4, SOL4, FA4, MI4, FA4, SOL4, MI4, DO4, RE4, MI4, DO4 };
+const byte temposCiranda[] PROGMEM = { 4, 4, 4, 4, 2, 4, 4, 4, 4, 4, 4, 2 };
+
 int notaAtualIndex = 0;
-int totalNotasDaMusica = sizeof(notasCaiCaiBalao) / sizeof(notasCaiCaiBalao[0]);
+int totalNotasDaMusica = 0;
 unsigned int frequenciaAtual = 0;
 
 unsigned long inicioNotaMs = 0;
@@ -55,12 +62,48 @@ unsigned long ultimoCliqueStop = 0;
 
 const unsigned long debounceMs = 180;
 
-unsigned int lerNotaAtual(int posicao) {
-  return pgm_read_word(&notasCaiCaiBalao[posicao]);
+void carregarTituloMusica(int indice, char *destino) {
+  switch (indice) {
+    case 0: strcpy_P(destino, PSTR("Cai Cai Balao")); break;
+    case 1: strcpy_P(destino, PSTR("Brilha Brilha")); break;
+    case 2: strcpy_P(destino, PSTR("Dona Aranha")); break;
+    case 3: strcpy_P(destino, PSTR("Tema do Gas")); break;
+    case 4: strcpy_P(destino, PSTR("Ciranda")); break;
+    default: strcpy_P(destino, PSTR("Sem titulo")); break;
+  }
 }
 
-byte lerTempoAtual(int posicao) {
-  return pgm_read_byte(&temposCaiCaiBalao[posicao]);
+int contarNotasMusica(int indice) {
+  switch (indice) {
+    case 0: return sizeof(notasCaiCaiBalao) / sizeof(notasCaiCaiBalao[0]);
+    case 1: return sizeof(notasBrilhaBrilha) / sizeof(notasBrilhaBrilha[0]);
+    case 2: return sizeof(notasDonaAranha) / sizeof(notasDonaAranha[0]);
+    case 3: return sizeof(notasTemaDoGas) / sizeof(notasTemaDoGas[0]);
+    case 4: return sizeof(notasCiranda) / sizeof(notasCiranda[0]);
+    default: return 0;
+  }
+}
+
+unsigned int lerNotaMusica(int indice, int posicao) {
+  switch (indice) {
+    case 0: return pgm_read_word(&notasCaiCaiBalao[posicao]);
+    case 1: return pgm_read_word(&notasBrilhaBrilha[posicao]);
+    case 2: return pgm_read_word(&notasDonaAranha[posicao]);
+    case 3: return pgm_read_word(&notasTemaDoGas[posicao]);
+    case 4: return pgm_read_word(&notasCiranda[posicao]);
+    default: return 0;
+  }
+}
+
+byte lerTempoMusica(int indice, int posicao) {
+  switch (indice) {
+    case 0: return pgm_read_byte(&temposCaiCaiBalao[posicao]);
+    case 1: return pgm_read_byte(&temposBrilhaBrilha[posicao]);
+    case 2: return pgm_read_byte(&temposDonaAranha[posicao]);
+    case 3: return pgm_read_byte(&temposTemaDoGas[posicao]);
+    case 4: return pgm_read_byte(&temposCiranda[posicao]);
+    default: return 4;
+  }
 }
 
 void atualizarLeds() {
@@ -77,23 +120,25 @@ void atualizarLeds() {
 }
 
 void atualizarTela() {
+  carregarTituloMusica(musicaSelecionada, tituloMusica);
+
   lcd.clear();
 
   if (estadoAtual == MENU) {
     lcd.setCursor(0, 0);
     lcd.print("Selecione:");
     lcd.setCursor(0, 1);
-    lcd.print(nomesMusicas[musicaSelecionada]);
+    lcd.print(tituloMusica);
   } else if (estadoAtual == TOCANDO) {
     lcd.setCursor(0, 0);
     lcd.print("Tocando:");
     lcd.setCursor(0, 1);
-    lcd.print(nomesMusicas[musicaSelecionada]);
+    lcd.print(tituloMusica);
   } else {
     lcd.setCursor(0, 0);
     lcd.print("Pausado:");
     lcd.setCursor(0, 1);
-    lcd.print(nomesMusicas[musicaSelecionada]);
+    lcd.print(tituloMusica);
   }
 }
 
@@ -113,6 +158,7 @@ void voltarParaMenu() {
   estadoAtual = MENU;
   noTone(PINO_BUZZER);
   notaAtualIndex = 0;
+  totalNotasDaMusica = 0;
   frequenciaAtual = 0;
   duracaoNotaMs = 0;
   restoNotaMs = 0;
@@ -126,8 +172,8 @@ void tocarNotaAtual() {
     return;
   }
 
-  frequenciaAtual = lerNotaAtual(notaAtualIndex);
-  byte divisorTempo = lerTempoAtual(notaAtualIndex);
+  frequenciaAtual = lerNotaMusica(musicaSelecionada, notaAtualIndex);
+  byte divisorTempo = lerTempoMusica(musicaSelecionada, notaAtualIndex);
 
   duracaoNotaMs = 1000UL / divisorTempo;
   restoNotaMs = duracaoNotaMs;
@@ -141,6 +187,8 @@ void tocarNotaAtual() {
 void iniciarMusica() {
   estadoAtual = TOCANDO;
   notaAtualIndex = 0;
+  totalNotasDaMusica = contarNotasMusica(musicaSelecionada);
+
   atualizarLeds();
   atualizarTela();
   tocarNotaAtual();
@@ -153,6 +201,7 @@ void pausarMusica() {
 
   estadoAtual = PAUSADO;
   noTone(PINO_BUZZER);
+
   atualizarLeds();
   atualizarTela();
 }
@@ -165,6 +214,7 @@ void retomarMusica() {
   else tone(PINO_BUZZER, frequenciaAtual);
 
   inicioNotaMs = millis();
+
   atualizarLeds();
   atualizarTela();
 }
