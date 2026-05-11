@@ -1,4 +1,5 @@
 #include <LiquidCrystal.h>
+#include <avr/pgmspace.h>
 
 LiquidCrystal lcd(9, 10, 11, 12, 13, A0);
 
@@ -31,11 +32,11 @@ String nomesMusicas[totalMusicas] = {
 
 int musicaSelecionada = 0;
 
-int notas[] = { SOL4, SOL4, LA4, SOL4, MI4, SOL4, LA4, SOL4, MI4, RE4, MI4, DO4 };
-int tempos[] = { 4, 4, 4, 4, 2, 4, 4, 4, 2, 4, 4, 2 };
+const unsigned int notasCaiCaiBalao[] PROGMEM = { SOL4, SOL4, LA4, SOL4, MI4, SOL4, LA4, SOL4, MI4, RE4, MI4, DO4 };
+const byte temposCaiCaiBalao[] PROGMEM = { 4, 4, 4, 4, 2, 4, 4, 4, 2, 4, 4, 2 };
 
 int notaAtualIndex = 0;
-int totalNotasDaMusica = sizeof(notas) / sizeof(notas[0]);
+int totalNotasDaMusica = sizeof(notasCaiCaiBalao) / sizeof(notasCaiCaiBalao[0]);
 unsigned int frequenciaAtual = 0;
 
 unsigned long inicioNotaMs = 0;
@@ -53,6 +54,14 @@ unsigned long ultimoCliquePlay = 0;
 unsigned long ultimoCliqueStop = 0;
 
 const unsigned long debounceMs = 180;
+
+unsigned int lerNotaAtual(int posicao) {
+  return pgm_read_word(&notasCaiCaiBalao[posicao]);
+}
+
+byte lerTempoAtual(int posicao) {
+  return pgm_read_byte(&temposCaiCaiBalao[posicao]);
+}
 
 void atualizarLeds() {
   if (estadoAtual == TOCANDO) {
@@ -117,8 +126,8 @@ void tocarNotaAtual() {
     return;
   }
 
-  frequenciaAtual = notas[notaAtualIndex];
-  byte divisorTempo = tempos[notaAtualIndex];
+  frequenciaAtual = lerNotaAtual(notaAtualIndex);
+  byte divisorTempo = lerTempoAtual(notaAtualIndex);
 
   duracaoNotaMs = 1000UL / divisorTempo;
   restoNotaMs = duracaoNotaMs;
