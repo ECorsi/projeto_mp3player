@@ -23,12 +23,17 @@ String nomesMusicas[totalMusicas] = {
 };
 
 int musicaSelecionada = 0;
+int frequenciaTeste = 440;
 
 int leituraAnteriorCima = HIGH;
 int leituraAnteriorBaixo = HIGH;
+int leituraAnteriorPlay = HIGH;
+int leituraAnteriorStop = HIGH;
 
 unsigned long ultimoCliqueCima = 0;
 unsigned long ultimoCliqueBaixo = 0;
+unsigned long ultimoCliquePlay = 0;
+unsigned long ultimoCliqueStop = 0;
 
 const unsigned long debounceMs = 180;
 
@@ -47,10 +52,23 @@ void atualizarLeds() {
 
 void atualizarTela() {
   lcd.clear();
-  lcd.setCursor(0, 0);
-  lcd.print("Selecione:");
-  lcd.setCursor(0, 1);
-  lcd.print(nomesMusicas[musicaSelecionada]);
+
+  if (estadoAtual == MENU) {
+    lcd.setCursor(0, 0);
+    lcd.print("Selecione:");
+    lcd.setCursor(0, 1);
+    lcd.print(nomesMusicas[musicaSelecionada]);
+  } else if (estadoAtual == TOCANDO) {
+    lcd.setCursor(0, 0);
+    lcd.print("Tocando:");
+    lcd.setCursor(0, 1);
+    lcd.print(nomesMusicas[musicaSelecionada]);
+  } else {
+    lcd.setCursor(0, 0);
+    lcd.print("Pausado:");
+    lcd.setCursor(0, 1);
+    lcd.print(nomesMusicas[musicaSelecionada]);
+  }
 }
 
 void proximaMusica() {
@@ -62,6 +80,34 @@ void proximaMusica() {
 void musicaAnterior() {
   musicaSelecionada--;
   if (musicaSelecionada < 0) musicaSelecionada = totalMusicas - 1;
+  atualizarTela();
+}
+
+void iniciarMusica() {
+  estadoAtual = TOCANDO;
+  tone(PINO_BUZZER, frequenciaTeste);
+  atualizarLeds();
+  atualizarTela();
+}
+
+void pausarMusica() {
+  estadoAtual = PAUSADO;
+  noTone(PINO_BUZZER);
+  atualizarLeds();
+  atualizarTela();
+}
+
+void retomarMusica() {
+  estadoAtual = TOCANDO;
+  tone(PINO_BUZZER, frequenciaTeste);
+  atualizarLeds();
+  atualizarTela();
+}
+
+void voltarParaMenu() {
+  estadoAtual = MENU;
+  noTone(PINO_BUZZER);
+  atualizarLeds();
   atualizarTela();
 }
 
@@ -84,6 +130,9 @@ void setup() {
 void loop() {
   int leituraCima = digitalRead(BOTAO_CIMA);
   int leituraBaixo = digitalRead(BOTAO_BAIXO);
+  int leituraPlay = digitalRead(BOTAO_PLAY);
+  int leituraStop = digitalRead(BOTAO_STOP);
+
   unsigned long agora = millis();
 
   if (leituraAnteriorCima == HIGH && leituraCima == LOW && (agora - ultimoCliqueCima > debounceMs)) {
@@ -96,6 +145,21 @@ void loop() {
     if (estadoAtual == MENU) musicaAnterior();
   }
 
+  if (leituraAnteriorPlay == HIGH && leituraPlay == LOW && (agora - ultimoCliquePlay > debounceMs)) {
+    ultimoCliquePlay = agora;
+
+    if (estadoAtual == MENU) iniciarMusica();
+    else if (estadoAtual == TOCANDO) pausarMusica();
+    else if (estadoAtual == PAUSADO) retomarMusica();
+  }
+
+  if (leituraAnteriorStop == HIGH && leituraStop == LOW && (agora - ultimoCliqueStop > debounceMs)) {
+    ultimoCliqueStop = agora;
+    if (estadoAtual == TOCANDO || estadoAtual == PAUSADO) voltarParaMenu();
+  }
+
   leituraAnteriorCima = leituraCima;
   leituraAnteriorBaixo = leituraBaixo;
+  leituraAnteriorPlay = leituraPlay;
+  leituraAnteriorStop = leituraStop;
 }
