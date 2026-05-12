@@ -1,3 +1,4 @@
+                              
 # Reprodutor de Músicas com Arduino Uno
 
 ## 1. Objetivo do Projeto
@@ -86,25 +87,30 @@ Nessa fase, foram montados:
 - o display LCD 16x2;
 - a protoboard com alimentação e interligações.
 
-#### Espaço para imagem da montagem no Tinkercad
+#### Imagens do processo de montagem no Thinkercard
+#### Montagem inicial
+<img width="1147" height="736" alt="WhatsApp Image 2026-05-04 at 16 52 53" src="https://github.com/user-attachments/assets/3898cbd5-c54b-4f63-ac7b-348181c060c7" />
 
-![Montagem inicial no Tinkercad](./imagens/tinkercad-montagem.png)
+#### Alerta de tensão no LCD
+<img width="1080" height="755" alt="WhatsApp Image 2026-05-06 at 09 06 49" src="https://github.com/user-attachments/assets/17dda88c-7f15-48f2-aca3-010bbdeee467" />
 
-#### Espaço para imagem da versão final no Tinkercad
-
-![Versão final no Tinkercad](./imagens/tinkercad-final.png)
+#### Colocado resistor em série para ligar LED do LCD no 5V direto
+<img width="1007" height="713" alt="WhatsApp Image 2026-05-06 at 09 06 22" src="https://github.com/user-attachments/assets/36a38e6f-e0d1-450a-92aa-d4e10d7dd1bd" />
 
 ### 3.5 Desenvolvimento físico
 
 Após a validação da simulação, o projeto também foi montado fisicamente e testado em funcionamento real. Isso foi importante para confirmar que o sistema não funcionava apenas no ambiente virtual, mas também no circuito real com Arduino, botões, buzzer, LEDs e LCD.
 
-#### Espaço para imagem da montagem física
+#### Imagens do processo de montagem física
 
-![Montagem física do projeto](./imagens/projeto-fisico.png)
+#### Prontoboard e Arduino fixados no suporte RoboCore
+<img width="4032" height="3024" alt="IMG_1186" src="https://github.com/user-attachments/assets/c132bdfb-17fa-4f4b-bb1e-1080acbc19b2" />
 
-#### Espaço para imagem do projeto funcionando fisicamente
+#### Botões e buzzer ligados com fio rígido
+<img width="2160" height="3840" alt="D6C28AB1-40F5-4F57-9927-56938DE90389" src="https://github.com/user-attachments/assets/448137c5-3eb8-4b13-b8b3-c2de929c125a" />
 
-![Projeto físico em funcionamento](./imagens/projeto-fisico-funcionando.png)
+#### Projeto Finalizado com LCD e LEDS
+
 
 ## 4. Explicações Técnicas Importantes
 
@@ -216,7 +222,7 @@ Durante o desenvolvimento, foram realizados testes graduais para validar cada et
 - funcionamento no Tinkercad;
 - funcionamento no protótipo físico.
 
-### 7.2 Espaço para fotos dos testes
+### 7.2 Fotos dos testes
 
 ![Teste do menu no LCD](./imagens/teste-menu-lcd.png)
 
@@ -226,14 +232,15 @@ Durante o desenvolvimento, foram realizados testes graduais para validar cada et
 
 ![Teste da montagem física](./imagens/teste-fisico.png)
 
-### 7.3 Espaço para vídeos
+### 7.3 Vídeos de funcionamento do projeto
+        
+#### Funcionamento no Thikercard
+https://github.com/user-attachments/assets/e9802cca-5e34-416f-aa9d-693427bc1fad
 
-Você pode inserir os vídeos como links do GitHub, Drive ou YouTube.
+#### Funcionamento no Físico
 
-Exemplos:
 
-- [Vídeo do projeto funcionando no Tinkercad](https://seu-link-aqui.com)
-- [Vídeo do projeto físico funcionando](https://seu-link-aqui.com)
+
 
 ## 8. Linha do Tempo dos Commits
 
