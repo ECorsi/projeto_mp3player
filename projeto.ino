@@ -44,6 +44,7 @@ const byte temposCiranda[] PROGMEM = { 4, 4, 4, 4, 2, 4, 4, 4, 4, 4, 4, 2 };
 
 int notaAtualIndex = 0;
 int totalNotasDaMusica = 0;
+int totalUnidadesMusica = 0;
 unsigned int frequenciaAtual = 0;
 
 unsigned long inicioNotaMs = 0;
@@ -106,6 +107,18 @@ byte lerTempoMusica(int indice, int posicao) {
   }
 }
 
+int contarUnidadesMusica(int indice) {
+  int soma = 0;
+  int totalNotas = contarNotasMusica(indice);
+
+  for (int i = 0; i < totalNotas; i++) {
+    byte divisor = lerTempoMusica(indice, i);
+    soma += 8 / divisor;
+  }
+
+  return soma;
+}
+
 void atualizarLeds() {
   if (estadoAtual == TOCANDO) {
     digitalWrite(LED_TOCANDO, HIGH);
@@ -157,11 +170,14 @@ void musicaAnterior() {
 void voltarParaMenu() {
   estadoAtual = MENU;
   noTone(PINO_BUZZER);
+
   notaAtualIndex = 0;
   totalNotasDaMusica = 0;
+  totalUnidadesMusica = 0;
   frequenciaAtual = 0;
   duracaoNotaMs = 0;
   restoNotaMs = 0;
+
   atualizarLeds();
   atualizarTela();
 }
@@ -175,7 +191,11 @@ void tocarNotaAtual() {
   frequenciaAtual = lerNotaMusica(musicaSelecionada, notaAtualIndex);
   byte divisorTempo = lerTempoMusica(musicaSelecionada, notaAtualIndex);
 
-  duracaoNotaMs = 1000UL / divisorTempo;
+  int unidadesDaNota = 8 / divisorTempo;
+  duracaoNotaMs = (5000UL * unidadesDaNota) / totalUnidadesMusica;
+
+  if (duracaoNotaMs < 1) duracaoNotaMs = 1;
+
   restoNotaMs = duracaoNotaMs;
 
   if (frequenciaAtual == 0) noTone(PINO_BUZZER);
@@ -188,6 +208,7 @@ void iniciarMusica() {
   estadoAtual = TOCANDO;
   notaAtualIndex = 0;
   totalNotasDaMusica = contarNotasMusica(musicaSelecionada);
+  totalUnidadesMusica = contarUnidadesMusica(musicaSelecionada);
 
   atualizarLeds();
   atualizarTela();
