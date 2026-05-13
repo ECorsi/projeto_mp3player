@@ -95,7 +95,7 @@ Nessa fase, foram montados:
 ![Alerta de tensão no LCD](./imagens/alerta_tensao.jpeg)
 
 #### Colocado resistor em série para ligar LED do LCD no 5V direto
-![Resistor no LCD](./imagens/resistor_lcd.jpeg)
+<img src="./imagens/resistor_lcd.jpeg" alt="Resistor no LCD" width="500">
 
 ### 3.5 Desenvolvimento físico
 
