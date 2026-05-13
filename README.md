@@ -89,13 +89,13 @@ Nessa fase, foram montados:
 
 #### Imagens do processo de montagem no Thinkercard
 #### Montagem inicial
-![Montagem inicial](./imagens/montagem_inicial.jpeg)
+<img src="./imagens/montagem_inicial.jpeg" alt="Resistor no LCD" width="700">
 
 #### Alerta de tensão no LCD
-![Alerta de tensão no LCD](./imagens/alerta_tensao.jpeg)
+<img src="./imagens/alerta_tensao.jpeg" alt="Resistor no LCD" width="700">
 
 #### Colocado resistor em série para ligar LED do LCD no 5V direto
-<img src="./imagens/resistor_lcd.jpeg" alt="Resistor no LCD" width="500">
+<img src="./imagens/resistor_lcd.jpeg" alt="Resistor no LCD" width="700">
 
 ### 3.5 Desenvolvimento físico
 
