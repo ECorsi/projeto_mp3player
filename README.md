@@ -88,16 +88,14 @@ Nessa fase, foram montados:
 - a protoboard com alimentação e interligações.
 
 #### Imagens do processo de montagem no Thinkercard
+#### Montagem inicial
 ![Montagem inicial](./imagens/montagem_inicial.jpeg)
 
-#### Montagem inicial
-<img width="800" height="auto" alt="WhatsApp Image 2026-05-04 at 16 52 53" src="https://github.com/user-attachments/assets/3898cbd5-c54b-4f63-ac7b-348181c060c7" />
-
 #### Alerta de tensão no LCD
-<img width="720" height="auto" alt="WhatsApp Image 2026-05-06 at 09 06 49" src="https://github.com/user-attachments/assets/17dda88c-7f15-48f2-aca3-010bbdeee467" />
+![Alerta de tensão no LCD](./imagens/alerta_tensao.jpeg)
 
 #### Colocado resistor em série para ligar LED do LCD no 5V direto
-<img width="802" height="auto" alt="WhatsApp Image 2026-05-06 at 09 06 22" src="https://github.com/user-attachments/assets/36a38e6f-e0d1-450a-92aa-d4e10d7dd1bd" />
+![Resistor no LCD](./imagens/resistor_lcd.jpeg)
 
 ### 3.5 Desenvolvimento físico
 
