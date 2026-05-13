@@ -107,10 +107,10 @@ Após a validação da simulação, o projeto também foi montado fisicamente e 
 <img src="./imagens/suporte.png" alt="Resistor no LCD" width="700">
 
 #### Botões e buzzer ligados com fio rígido
-<img src="./imagens/btn_buzzer.jpg" alt="Resistor no LCD" width="700">
+<img src="./imagens/btn_buzzer.jpg" alt="Resistor no LCD" width="600">
 
 #### Projeto Finalizado com LCD e LEDS
-<img src="./imagens/projeto_finalizado.jpeg" alt="Resistor no LCD" width="700">
+<img src="./imagens/projeto_finalizado.jpeg" alt="Resistor no LCD" width="600">
 
 ## 4. Explicações Técnicas Importantes
 
