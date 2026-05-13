@@ -225,16 +225,16 @@ Durante o desenvolvimento, foram realizados testes graduais para validar cada et
 ### 7.2 Fotos dos testes
 
 #### Teste do menu no LCD
-<img width="600" height="auto" alt="WhatsApp Image 2026-05-12 at 21 40 11" src="https://github.com/user-attachments/assets/43d4418d-ade1-422d-ab16-15413f566701" />
+<img src="./imagens/menu.jpeg" alt="Resistor no LCD" width="600">
 
 #### Teste da reprodução
-<img width="600" height="auto" alt="WhatsApp Image 2026-05-12 at 21 40 10 (1)" src="https://github.com/user-attachments/assets/44f6353f-9efc-49ed-a082-85e8ba853ed5" />
+<img src="./imagens/tocando.jpeg" alt="Resistor no LCD" width="600">
 
 #### Teste da pausa
-<img width="600" height="auto" alt="WhatsApp Image 2026-05-12 at 21 40 10" src="https://github.com/user-attachments/assets/bd99bf39-3084-4463-9c14-b4abb586e5b1" />
+<img src="./imagens/pausado.jpeg" alt="Resistor no LCD" width="600">
 
 #### Montagem física completa
-<img width="600" height="auto" alt="WhatsApp Image 2026-05-12 at 21 40 26" src="https://github.com/user-attachments/assets/0b9be4ba-2b77-40ea-9c60-f49732d46ba2" />
+<img src="./imagens/projeto_finalizado.jpeg" alt="Resistor no LCD" width="600">
 
 ### 7.3 Vídeos de funcionamento do projeto
         
