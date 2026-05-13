@@ -88,6 +88,8 @@ Nessa fase, foram montados:
 - a protoboard com alimentação e interligações.
 
 #### Imagens do processo de montagem no Thinkercard
+![Montagem inicial](./imagens/montagem_inicial.jpeg)
+
 #### Montagem inicial
 <img width="800" height="auto" alt="WhatsApp Image 2026-05-04 at 16 52 53" src="https://github.com/user-attachments/assets/3898cbd5-c54b-4f63-ac7b-348181c060c7" />
 
