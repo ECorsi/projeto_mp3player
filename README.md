@@ -238,11 +238,11 @@ Durante o desenvolvimento, foram realizados testes graduais para validar cada et
 
 ### 7.3 Vídeos de funcionamento do projeto
         
-#### Funcionamento no Thikercard
-![Thinkercard](./videos/teste_thinkercard.mp4)
+#### Funcionamento no Thikercard (link externo)
+[![Thinkercard](./imagens/resistor_lcd.jpeg)](https://drive.google.com/file/d/1r93Er3wkpFVHJEWoa0liuChclK6hgBvl/view?usp=sharing)
 
-#### Funcionamento no Físico
-![Explicação](./videos/explicacao_fisico.mp4)
+#### Funcionamento no Físico (clique e baixe o vídeo)
+[![Thinkercard](./imagens/thumb_thinkercard.png)](./videos/explicacao_fisico.mp4)
 
 ## 8. Linha do Tempo dos Commits
 
