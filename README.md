@@ -89,13 +89,13 @@ Nessa fase, foram montados:
 
 #### Imagens do processo de montagem no Thinkercard
 #### Montagem inicial
-![Montagem inicial](./imagens/montagem_inicial.jpeg)
+<img src="./imagens/montagem_inicial.jpeg" alt="Resistor no LCD" width="700">
 
 #### Alerta de tensão no LCD
-![Alerta de tensão no LCD](./imagens/alerta_tensao.jpeg)
+<img src="./imagens/alerta_tensao.jpeg" alt="Resistor no LCD" width="700">
 
 #### Colocado resistor em série para ligar LED do LCD no 5V direto
-![Resistor no LCD](./imagens/resistor_lcd.jpeg)
+<img src="./imagens/resistor_lcd.jpeg" alt="Resistor no LCD" width="700">
 
 ### 3.5 Desenvolvimento físico
 
@@ -103,13 +103,14 @@ Após a validação da simulação, o projeto também foi montado fisicamente e 
 
 #### Imagens do processo de montagem física
 #### Prontoboard e Arduino fixados no suporte RoboCore
-![Prontoboard e Arduino](./imagens/suporte.png)
+
+<img src="./imagens/suporte.png" alt="Resistor no LCD" width="700">
 
 #### Botões e buzzer ligados com fio rígido
-![Botões e Buzzer](./imagens/btn_buzzer.jpg)
+<img src="./imagens/btn_buzzer.jpg" alt="Resistor no LCD" width="600">
 
 #### Projeto Finalizado com LCD e LEDS
-![Projeto Finalizado](./imagens/projeto_finalizado.jpeg)
+<img src="./imagens/projeto_finalizado.jpeg" alt="Resistor no LCD" width="600">
 
 ## 4. Explicações Técnicas Importantes
 
