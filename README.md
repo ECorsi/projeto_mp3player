@@ -89,27 +89,28 @@ Nessa fase, foram montados:
 
 #### Imagens do processo de montagem no Thinkercard
 #### Montagem inicial
-<img width="1147" height="736" alt="WhatsApp Image 2026-05-04 at 16 52 53" src="https://github.com/user-attachments/assets/3898cbd5-c54b-4f63-ac7b-348181c060c7" />
+<img width="800" height="auto" alt="WhatsApp Image 2026-05-04 at 16 52 53" src="https://github.com/user-attachments/assets/3898cbd5-c54b-4f63-ac7b-348181c060c7" />
 
 #### Alerta de tensão no LCD
-<img width="1080" height="755" alt="WhatsApp Image 2026-05-06 at 09 06 49" src="https://github.com/user-attachments/assets/17dda88c-7f15-48f2-aca3-010bbdeee467" />
+<img width="720" height="auto" alt="WhatsApp Image 2026-05-06 at 09 06 49" src="https://github.com/user-attachments/assets/17dda88c-7f15-48f2-aca3-010bbdeee467" />
 
 #### Colocado resistor em série para ligar LED do LCD no 5V direto
-<img width="1007" height="713" alt="WhatsApp Image 2026-05-06 at 09 06 22" src="https://github.com/user-attachments/assets/36a38e6f-e0d1-450a-92aa-d4e10d7dd1bd" />
+<img width="802" height="auto" alt="WhatsApp Image 2026-05-06 at 09 06 22" src="https://github.com/user-attachments/assets/36a38e6f-e0d1-450a-92aa-d4e10d7dd1bd" />
 
 ### 3.5 Desenvolvimento físico
 
 Após a validação da simulação, o projeto também foi montado fisicamente e testado em funcionamento real. Isso foi importante para confirmar que o sistema não funcionava apenas no ambiente virtual, mas também no circuito real com Arduino, botões, buzzer, LEDs e LCD.
 
 #### Imagens do processo de montagem física
-
+width="4032" height="3024"
 #### Prontoboard e Arduino fixados no suporte RoboCore
-<img width="4032" height="3024" alt="IMG_1186" src="https://github.com/user-attachments/assets/c132bdfb-17fa-4f4b-bb1e-1080acbc19b2" />
+<img width="900" height="auto" alt="IMG_1186" src="https://github.com/user-attachments/assets/c132bdfb-17fa-4f4b-bb1e-1080acbc19b2" />
 
 #### Botões e buzzer ligados com fio rígido
-<img width="2160" height="3840" alt="D6C28AB1-40F5-4F57-9927-56938DE90389" src="https://github.com/user-attachments/assets/448137c5-3eb8-4b13-b8b3-c2de929c125a" />
+<img width="600" height="auto" alt="D6C28AB1-40F5-4F57-9927-56938DE90389" src="https://github.com/user-attachments/assets/448137c5-3eb8-4b13-b8b3-c2de929c125a" />
 
 #### Projeto Finalizado com LCD e LEDS
+<img width="600" height="auto" alt="WhatsApp Image 2026-05-12 at 21 40 26" src="https://github.com/user-attachments/assets/11ffad77-91e5-44c7-9529-dcdc765db18d" />
 
 
 ## 4. Explicações Técnicas Importantes
@@ -224,13 +225,17 @@ Durante o desenvolvimento, foram realizados testes graduais para validar cada et
 
 ### 7.2 Fotos dos testes
 
-![Teste do menu no LCD](./imagens/teste-menu-lcd.png)
+#### Teste do menu no LCD
+<img width="600" height="auto" alt="WhatsApp Image 2026-05-12 at 21 40 11" src="https://github.com/user-attachments/assets/43d4418d-ade1-422d-ab16-15413f566701" />
 
-![Teste da reprodução](./imagens/teste-reproducao.png)
+#### Teste da reprodução
+<img width="600" height="auto" alt="WhatsApp Image 2026-05-12 at 21 40 10 (1)" src="https://github.com/user-attachments/assets/44f6353f-9efc-49ed-a082-85e8ba853ed5" />
 
-![Teste da pausa](./imagens/teste-pausa.png)
+#### Teste da pausa
+<img width="600" height="auto" alt="WhatsApp Image 2026-05-12 at 21 40 10" src="https://github.com/user-attachments/assets/bd99bf39-3084-4463-9c14-b4abb586e5b1" />
 
-![Teste da montagem física](./imagens/teste-fisico.png)
+#### Montagem física completa
+<img width="600" height="auto" alt="WhatsApp Image 2026-05-12 at 21 40 26" src="https://github.com/user-attachments/assets/0b9be4ba-2b77-40ea-9c60-f49732d46ba2" />
 
 ### 7.3 Vídeos de funcionamento do projeto
         
@@ -238,9 +243,7 @@ Durante o desenvolvimento, foram realizados testes graduais para validar cada et
 https://github.com/user-attachments/assets/e9802cca-5e34-416f-aa9d-693427bc1fad
 
 #### Funcionamento no Físico
-
-
-
+https://github.com/user-attachments/assets/3c465a5f-19dd-4980-ae10-af4d465c2807
 
 ## 8. Linha do Tempo dos Commits
 
