@@ -88,32 +88,28 @@ Nessa fase, foram montados:
 - a protoboard com alimentação e interligações.
 
 #### Imagens do processo de montagem no Thinkercard
+#### Montagem inicial
 ![Montagem inicial](./imagens/montagem_inicial.jpeg)
 
-#### Montagem inicial
-<img width="800" height="auto" alt="WhatsApp Image 2026-05-04 at 16 52 53" src="https://github.com/user-attachments/assets/3898cbd5-c54b-4f63-ac7b-348181c060c7" />
-
 #### Alerta de tensão no LCD
-<img width="720" height="auto" alt="WhatsApp Image 2026-05-06 at 09 06 49" src="https://github.com/user-attachments/assets/17dda88c-7f15-48f2-aca3-010bbdeee467" />
+![Alerta de tensão no LCD](./imagens/alerta_tensao.jpeg)
 
 #### Colocado resistor em série para ligar LED do LCD no 5V direto
-<img width="802" height="auto" alt="WhatsApp Image 2026-05-06 at 09 06 22" src="https://github.com/user-attachments/assets/36a38e6f-e0d1-450a-92aa-d4e10d7dd1bd" />
+![Resistor no LCD](./imagens/resistor_lcd.jpeg)
 
 ### 3.5 Desenvolvimento físico
 
 Após a validação da simulação, o projeto também foi montado fisicamente e testado em funcionamento real. Isso foi importante para confirmar que o sistema não funcionava apenas no ambiente virtual, mas também no circuito real com Arduino, botões, buzzer, LEDs e LCD.
 
 #### Imagens do processo de montagem física
-width="4032" height="3024"
 #### Prontoboard e Arduino fixados no suporte RoboCore
-<img width="900" height="auto" alt="IMG_1186" src="https://github.com/user-attachments/assets/c132bdfb-17fa-4f4b-bb1e-1080acbc19b2" />
+![Prontoboard e Arduino](./imagens/suporte.png)
 
 #### Botões e buzzer ligados com fio rígido
-<img width="600" height="auto" alt="D6C28AB1-40F5-4F57-9927-56938DE90389" src="https://github.com/user-attachments/assets/448137c5-3eb8-4b13-b8b3-c2de929c125a" />
+![Botões e Buzzer](./imagens/btn_buzzer.jpg)
 
 #### Projeto Finalizado com LCD e LEDS
-<img width="600" height="auto" alt="WhatsApp Image 2026-05-12 at 21 40 26" src="https://github.com/user-attachments/assets/11ffad77-91e5-44c7-9529-dcdc765db18d" />
-
+![Projeto Finalizado](./imagens/projeto_finalizado.jpeg)
 
 ## 4. Explicações Técnicas Importantes
 
