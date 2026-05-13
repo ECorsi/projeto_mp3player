@@ -103,13 +103,14 @@ Após a validação da simulação, o projeto também foi montado fisicamente e 
 
 #### Imagens do processo de montagem física
 #### Prontoboard e Arduino fixados no suporte RoboCore
-![Prontoboard e Arduino](./imagens/suporte.png)
+
+<img src="./imagens/suporte.png" alt="Resistor no LCD" width="700">
 
 #### Botões e buzzer ligados com fio rígido
-![Botões e Buzzer](./imagens/btn_buzzer.jpg)
+<img src="./imagens/btn_buzzer.jpg" alt="Resistor no LCD" width="700">
 
 #### Projeto Finalizado com LCD e LEDS
-![Projeto Finalizado](./imagens/projeto_finalizado.jpeg)
+<img src="./imagens/projeto_finalizado.jpeg" alt="Resistor no LCD" width="700">
 
 ## 4. Explicações Técnicas Importantes
 
