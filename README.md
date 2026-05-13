@@ -239,10 +239,10 @@ Durante o desenvolvimento, foram realizados testes graduais para validar cada et
 ### 7.3 Vídeos de funcionamento do projeto
         
 #### Funcionamento no Thikercard
-https://github.com/user-attachments/assets/e9802cca-5e34-416f-aa9d-693427bc1fad
+![Thinkercard](./videos/teste_thinkercard.mp4)
 
 #### Funcionamento no Físico
-https://github.com/user-attachments/assets/3c465a5f-19dd-4980-ae10-af4d465c2807
+![Explicação](./videos/explicacao_fisico.mp4)
 
 ## 8. Linha do Tempo dos Commits
 
