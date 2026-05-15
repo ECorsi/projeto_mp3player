@@ -49,6 +49,8 @@ A ordem de desenvolvimento seguiu, de forma resumida, estas etapas:
 9. integração do LCD;
 10. refinamento final do código.
 
+Na etapa final de montagem, foi adicionada uma regulagem de contraste ao display LCD por meio de um potenciômetro de 10 kΩ conectado ao pino VO. Essa alteração não exigiu mudanças no software, pois afetou apenas a parte elétrica do display, mas trouxe melhoria prática na leitura das informações exibidas.
+
 ### 3.2 Materiais utilizados
 
 - Arduino Uno
@@ -59,6 +61,7 @@ A ordem de desenvolvimento seguiu, de forma resumida, estas etapas:
 - Resistores para os LEDs
 - 1 buzzer piezoelétrico
 - 1 display LCD 16x2
+- 1 potenciômetro de 10 kΩ
 - Jumpers Flexiveis
 - Jumpers Rigidos
 - Tinkercad Circuits
@@ -86,6 +89,7 @@ Nessa fase, foram montados:
 - o buzzer;
 - o display LCD 16x2;
 - a protoboard com alimentação e interligações.
+- 1 potenciômetro;
 
 #### Imagens do processo de montagem no Thinkercard
 #### Montagem inicial
@@ -97,9 +101,14 @@ Nessa fase, foram montados:
 #### Colocado resistor em série para ligar LED do LCD no 5V direto
 <img src="./imagens/resistor_lcd.jpeg" alt="Resistor no LCD" width="700">
 
+#### Instalado 1 Potenciômetro
+<img src="./imagens/finalizado_tinkercad.png" alt="Potenciômetro no LCD" width="700">
+
 ### 3.5 Desenvolvimento físico
 
 Após a validação da simulação, o projeto também foi montado fisicamente e testado em funcionamento real. Isso foi importante para confirmar que o sistema não funcionava apenas no ambiente virtual, mas também no circuito real com Arduino, botões, buzzer, LEDs e LCD.
+
+Na montagem física final, o LCD recebeu também um potenciômetro para ajuste de contraste, o que tornou a leitura do visor mais confortável e nítida durante os testes presenciais.
 
 #### Imagens do processo de montagem física
 #### Prontoboard e Arduino fixados no suporte RoboCore
@@ -111,6 +120,9 @@ Após a validação da simulação, o projeto também foi montado fisicamente e 
 
 #### Projeto Finalizado com LCD e LEDS
 <img src="./imagens/projeto_finalizado.jpeg" alt="Resistor no LCD" width="600">
+
+#### Projeto 100% Finalizado e Ajustado com 1 Potenciômetro
+<img src="./imagens/finalizado.jpeg" alt="Potenciômetro no LCD" width="600">
 
 ## 4. Explicações Técnicas Importantes
 
@@ -141,13 +153,15 @@ O debounce foi implementado para:
 - impedir pausas e retomadas involuntárias;
 - tornar a interface mais estável e previsível.
 
-### 4.3 Uso do LCD sem potenciômetro
+### 4.3 Uso do LCD e o potenciômetro
 
-Em muitos projetos com LCD 16x2, é comum utilizar um potenciômetro para ajustar o contraste do display. No entanto, neste projeto isso não foi necessário.
+Em muitos projetos com LCD 16x2, é comum utilizar um potenciômetro para ajustar o contraste do display. No entanto, neste projeto no inicio não foi necessário.
 
 No ambiente de simulação utilizado, foi possível obter contraste suficiente ligando o pino de contraste do LCD diretamente ao GND, o que permitiu visualizar corretamente o texto sem precisar de ajuste fino manual.
 
 Por isso, optou-se por não utilizar potenciômetro, mantendo o circuito mais simples e funcional.
+ 
+Embora o display tenha funcionado inicialmente sem potenciômetro, na etapa final do projeto foi observado que a leitura direta do visor poderia ficar menos confortável em determinadas condições de visualização, principalmente no protótipo físico. Por esse motivo, foi adicionado um potenciômetro ao pino de contraste (VO) do LCD, permitindo o ajuste manual da visualização dos caracteres e melhorando a legibilidade do sistema sem necessidade de alterações no código.
 
 ### 4.4 Problema encontrado no backlight do LCD no Tinkercad
 
@@ -218,6 +232,7 @@ Durante o desenvolvimento, foram realizados testes graduais para validar cada et
 - pausa e retomada da música;
 - interrupção com botão stop;
 - exibição correta das informações no LCD;
+- validação do ajuste de contraste do LCD com potenciômetro;
 - validação das músicas armazenadas na FLASH;
 - funcionamento no Tinkercad;
 - funcionamento no protótipo físico.
@@ -234,15 +249,18 @@ Durante o desenvolvimento, foram realizados testes graduais para validar cada et
 <img src="./imagens/pausado.jpeg" alt="Resistor no LCD" width="600">
 
 #### Montagem física completa
-<img src="./imagens/projeto_finalizado.jpeg" alt="Resistor no LCD" width="600">
+<img src="./imagens/finalizado.jpeg" alt="Potenciômetro no LCD" width="600">
 
 ### 7.3 Vídeos de funcionamento do projeto
         
 #### Funcionamento no Thikercard (LINK EXTERNO)
 [![Thinkercard](./imagens/thumb_1.png)](https://drive.google.com/file/d/1r93Er3wkpFVHJEWoa0liuChclK6hgBvl/view?usp=sharing)
 
-#### Funcionamento no Físico (LINK EXTERNO)
+#### Funcionamento no Físico S/ Potenciômetro(LINK EXTERNO)
 [![Thinkercard](./imagens/thumb_2.png)](https://drive.google.com/file/d/18pnxCX9px0p0mqcqHjCMw-RGZeS4Qqtv/view?usp=sharing)
+
+#### Funcionamento no Físico C/ Potenciômetro (LINK EXTERNO)
+[![Thinkercard](./imagens/thumb_2.png)](https://drive.google.com/file/d/1FudAA5PODWw5QBP_LVLQC9sAjsixE2Iw/view?usp=sharing)
 
 ## 8. Linha do Tempo dos Commits
 
@@ -272,9 +290,16 @@ Padronização do tempo total das músicas para melhorar a experiência de teste
 ### Commit 8 — refinamento final dos nomes e limpeza da versao entregue
 Ajustes finais de legibilidade do código, limpeza da interface e consolidação da versão final do sistema.
 
+### Commit 9 — ajustado contraste do lcd com potenciometro no prototipo final
+Adição de potenciômetro no pino de contraste do LCD para melhorar a legibilidade no protótipo final, sem necessidade de alterar a lógica do código.
+
+O display passou a ter ajuste manual de contraste, melhorando a visualização das informações exibidas, especialmente na montagem física final do projeto.
+
 ## 9. Conclusão
 
 O projeto foi concluído com sucesso, atendendo aos principais requisitos propostos. Foi possível desenvolver um sistema embarcado funcional, com interface por botões, sinalização por LEDs, reprodução musical em buzzer e exibição de informações em LCD 16x2.
+
+Além disso, o projeto passou por um refinamento final de hardware com a inclusão de um potenciômetro no LCD, mostrando que a solução evoluiu não apenas em funcionamento, mas também em usabilidade e qualidade de visualização.
 
 Além da parte funcional, o projeto também contribuiu para o aprendizado de conceitos importantes, como:
 
