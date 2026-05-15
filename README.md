@@ -93,16 +93,16 @@ Nessa fase, foram montados:
 
 #### Imagens do processo de montagem no Thinkercard
 #### Montagem inicial
-<img src="./imagens/montagem_inicial.jpeg" alt="Resistor no LCD" width="700">
+<img src="./imagens/montagem_inicial.jpeg" alt="Resistor no LCD" width="550">
 
 #### Alerta de tensão no LCD
-<img src="./imagens/alerta_tensao.jpeg" alt="Resistor no LCD" width="700">
+<img src="./imagens/alerta_tensao.jpeg" alt="Resistor no LCD" width="550">
 
 #### Colocado resistor em série para ligar LED do LCD no 5V direto
-<img src="./imagens/resistor_lcd.jpeg" alt="Resistor no LCD" width="700">
+<img src="./imagens/resistor_lcd.jpeg" alt="Resistor no LCD" width="550">
 
 #### Instalado 1 Potenciômetro
-<img src="./imagens/finalizado_tinkercad.png" alt="Potenciômetro no LCD" width="700">
+<img src="./imagens/finalizado_tinkercad.png" alt="Potenciômetro no LCD" width="550">
 
 ### 3.5 Desenvolvimento físico
 
@@ -113,16 +113,16 @@ Na montagem física final, o LCD recebeu também um potenciômetro para ajuste d
 #### Imagens do processo de montagem física
 #### Prontoboard e Arduino fixados no suporte RoboCore
 
-<img src="./imagens/suporte.png" alt="Resistor no LCD" width="700">
+<img src="./imagens/suporte.png" alt="Resistor no LCD" width="650">
 
 #### Botões e buzzer ligados com fio rígido
-<img src="./imagens/btn_buzzer.jpg" alt="Resistor no LCD" width="600">
+<img src="./imagens/btn_buzzer.jpg" alt="Resistor no LCD" width="450">
 
 #### Projeto Finalizado com LCD e LEDS
-<img src="./imagens/projeto_finalizado.jpeg" alt="Resistor no LCD" width="600">
+<img src="./imagens/projeto_finalizado.jpeg" alt="Resistor no LCD" width="450">
 
 #### Projeto 100% Finalizado e Ajustado com 1 Potenciômetro
-<img src="./imagens/finalizado.jpeg" alt="Potenciômetro no LCD" width="600">
+<img src="./imagens/finalizado.jpeg" alt="Potenciômetro no LCD" width="450">
 
 ## 4. Explicações Técnicas Importantes
 
@@ -240,25 +240,27 @@ Durante o desenvolvimento, foram realizados testes graduais para validar cada et
 ### 7.2 Fotos dos testes
 
 #### Teste do menu no LCD
-<img src="./imagens/menu.jpeg" alt="Resistor no LCD" width="600">
+<img src="./imagens/menu.jpeg" alt="Resistor no LCD" width="450">
 
 #### Teste da reprodução
-<img src="./imagens/tocando.jpeg" alt="Resistor no LCD" width="600">
+<img src="./imagens/tocando.jpeg" alt="Resistor no LCD" width="450">
 
 #### Teste da pausa
-<img src="./imagens/pausado.jpeg" alt="Resistor no LCD" width="600">
+<img src="./imagens/pausado.jpeg" alt="Resistor no LCD" width="450">
 
 #### Montagem física completa
-<img src="./imagens/finalizado.jpeg" alt="Potenciômetro no LCD" width="600">
+<img src="./imagens/finalizado.jpeg" alt="Potenciômetro no LCD" width="450">
 
 ### 7.3 Vídeos de funcionamento do projeto
         
 #### Funcionamento no Thikercard (LINK EXTERNO)
-[![Thinkercard](./imagens/thumb_1.png)](https://drive.google.com/file/d/1r93Er3wkpFVHJEWoa0liuChclK6hgBvl/view?usp=sharing)
-
+<a href="https://drive.google.com/file/d/1r93Er3wkpFVHJEWoa0liuChclK6hgBvl/view?usp=sharing" target="_blank">
+  <img src="./imagens/thumb_1.png" alt="Vídeo do projeto no Thinkercard" width="450">
+</a>
 #### Funcionamento no Físico S/ Potenciômetro(LINK EXTERNO)
-[![Thinkercard](./imagens/thumb_2.png)](https://drive.google.com/file/d/18pnxCX9px0p0mqcqHjCMw-RGZeS4Qqtv/view?usp=sharing)
-
+<a href="https://drive.google.com/file/d/18pnxCX9px0p0mqcqHjCMw-RGZeS4Qqtv/view?usp=sharing" target="_blank">
+  <img src="./imagens/thumb_2.png" alt="Vídeo do projeto no Thinkercard" width="450">
+</a>
 #### Funcionamento no Físico C/ Potenciômetro (LINK EXTERNO)
 <a href="https://drive.google.com/file/d/1FudAA5PODWw5QBP_LVLQC9sAjsixE2Iw/view?usp=sharing" target="_blank">
   <img src="./imagens/thumb_3.png" alt="Vídeo do projeto no Thinkercard" width="450">
