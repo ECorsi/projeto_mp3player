@@ -257,10 +257,12 @@ Durante o desenvolvimento, foram realizados testes graduais para validar cada et
 <a href="https://drive.google.com/file/d/1r93Er3wkpFVHJEWoa0liuChclK6hgBvl/view?usp=sharing" target="_blank">
   <img src="./imagens/thumb_1.png" alt="Vídeo do projeto no Thinkercard" width="450">
 </a>
+
 #### Funcionamento no Físico S/ Potenciômetro(LINK EXTERNO)
 <a href="https://drive.google.com/file/d/18pnxCX9px0p0mqcqHjCMw-RGZeS4Qqtv/view?usp=sharing" target="_blank">
   <img src="./imagens/thumb_2.png" alt="Vídeo do projeto no Thinkercard" width="450">
 </a>
+
 #### Funcionamento no Físico C/ Potenciômetro (LINK EXTERNO)
 <a href="https://drive.google.com/file/d/1FudAA5PODWw5QBP_LVLQC9sAjsixE2Iw/view?usp=sharing" target="_blank">
   <img src="./imagens/thumb_3.png" alt="Vídeo do projeto no Thinkercard" width="450">
