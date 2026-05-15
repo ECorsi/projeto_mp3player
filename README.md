@@ -260,7 +260,9 @@ Durante o desenvolvimento, foram realizados testes graduais para validar cada et
 [![Thinkercard](./imagens/thumb_2.png)](https://drive.google.com/file/d/18pnxCX9px0p0mqcqHjCMw-RGZeS4Qqtv/view?usp=sharing)
 
 #### Funcionamento no Físico C/ Potenciômetro (LINK EXTERNO)
-[![Thinkercard](./imagens/thumb_2.png)](https://drive.google.com/file/d/1FudAA5PODWw5QBP_LVLQC9sAjsixE2Iw/view?usp=sharing)
+<a href="https://drive.google.com/file/d/1FudAA5PODWw5QBP_LVLQC9sAjsixE2Iw/view?usp=sharing" target="_blank">
+  <img src="./imagens/thumb_3.png" alt="Vídeo do projeto no Thinkercard" width="450">
+</a>
 
 ## 8. Linha do Tempo dos Commits
 
